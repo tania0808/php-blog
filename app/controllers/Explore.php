@@ -1,6 +1,6 @@
 <?php
 
-class Home extends Controller
+class Explore extends Controller
 {
     public function index()
     {
@@ -9,7 +9,7 @@ class Home extends Controller
 
         $this->view('home/index', [
             'user' => 'tania',
-            'tab' => 'home'
+            'tab' => 'explore'
         ]);
     }
 }
