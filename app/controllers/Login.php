@@ -1,6 +1,6 @@
 <?php
 
-class Home extends Controller
+class Login extends Controller
 {
     public function index()
     {
@@ -10,7 +10,7 @@ class Home extends Controller
 
         $users = $user->query('SELECT * FROM users');
 
-        $this->view('home/index', [
+        $this->view('login', [
             'users' => $users,
             'tab' => 'home'
         ]);

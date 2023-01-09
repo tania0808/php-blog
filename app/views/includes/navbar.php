@@ -1,5 +1,7 @@
 <div class="flex justify-between items-center">
     <a href="<?=ROOT?>/home"><img class="h-16 object-fill" src="<?=ROOT?>/assets/logo.jpeg" alt="logo"></a>
+    <?php
+    if(isset($_SESSION['USER'])) {?>
     <div>
         <ul class="flex gap-x-20">
             <a href="<?=ROOT?>/home">
@@ -34,4 +36,17 @@
             </ul>
         </div>
     </div>
+    <?php } else {
+        $url = $_SERVER['REQUEST_URI'];
+        $result = explode('public/', $_SERVER['REQUEST_URI']);
+        if($result[1] == 'signup') { ?>
+            <a href="<?=ROOT?>/login">
+               Login
+            </a>
+            <?php } else { ?>
+            <a href="<?=ROOT?>/signup">
+                Signup
+            </a>
+    <?php } }?>
+
 </div>

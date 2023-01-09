@@ -1,7 +1,6 @@
 <?php
 session_start();
-require_once '../app/init.php';
-
+require '../app/core/autoload.php';
 $app = new App();
 ?>
 

@@ -15,4 +15,9 @@ class Controller
             require_once '../app/views/404.view.php';
         }
     }
+
+    public function redirect($link){
+        header("Location: " . ROOT . "/" . trim($link));
+        die;
+    }
 }
