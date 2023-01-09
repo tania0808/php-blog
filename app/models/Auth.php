@@ -10,8 +10,9 @@ class Auth
         return false;
     }
 
-    public static function logout() {
-        if(isset($_SESSION['USER'])){
+    public static function logout()
+    {
+        if (isset($_SESSION['USER'])) {
             unset($_SESSION['USER']);
         }
     }
