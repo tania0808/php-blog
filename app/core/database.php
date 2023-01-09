@@ -30,24 +30,23 @@ class Database
 
     }
 
-    public function query($query, $data_type = 'object'){
+    public function query($query, $data = [], $data_type = 'object'){
         $connection = $this->connect();
         $statement = $connection->prepare($query);
 
         if($statement){
-            $check = $statement->execute();
+            $check = $statement->execute($data);
             if($check){
                 if($data_type = 'object'){
                     $result = $statement->fetchAll(PDO::FETCH_OBJ);
                 } else {
                     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                 }
-            return $result;
             }
+        }
+        if(is_array($result) && count($result) > 0){
+            return $result;
         }
         return false;
     }
-
-
-
 }
