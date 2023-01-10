@@ -13,14 +13,17 @@ $app = new App();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
         * {
             font-family: 'Poppins';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         main {
             background: #FAFAFA;
             height: 100%;
+            min-height: 100vh;
         }
         textarea {
             resize: none;

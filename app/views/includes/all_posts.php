@@ -1,7 +1,7 @@
 <?php foreach ($posts as $post) :?>
-    <div class="bg-white w-9/12 my-6 mx-auto rounded-xl pt-2.5 px-6 pb-6">
+    <div class="bg-white w-9/12 md:w-6/12 my-6 mx-auto rounded-xl pt-2.5 px-6 pb-6 mb-10">
         <div class="flex items-center">
-            <img class="h-8 rounded-sm mr-2" src="<?= ROOT . '/assets/' . $_SESSION['USER']->image ?>" alt="">
+            <img class="h-10 rounded-sm mr-2" src="<?= ROOT . '/assets/' . $_SESSION['USER']->image ?>" alt="">
             <div>
                 <h3 class="font-bold text-sm"><?=$post->user->user_name?></h3>
                 <span class="text-xs"><?=get_date($post->date)?></span>
