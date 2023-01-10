@@ -20,7 +20,7 @@ $app = new App();
         }
         main {
             background: #FAFAFA;
-            height: 100vh;
+            height: 100%;
         }
         textarea {
             resize: none;
@@ -34,6 +34,8 @@ $app = new App();
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        grayBtn: '#4F4F4F',
+                        hoverBtn: '#F2F2F2',
                     },
                     fontFamily: {
                         'poppins' : 'Poppins'
