@@ -1,4 +1,4 @@
-<div class="bg-white w-9/12 my-6 mx-auto rounded-xl pt-2.5 px-6 pb-6">
+<div class="bg-white w-9/12 md:w-7/12 my-6 mx-auto rounded-xl pt-2.5 px-6 pb-6">
     <h3 class="font-bold mb-2">Tweet something</h3>
     <?php
     if($error){
@@ -14,7 +14,7 @@
         <div class="flex justify-between align-center mt-6">
             <label for="image"><i class="fa-solid fa-image"></i></label>
             <input name="image" type="file" class="hidden" id="image">
-            <button class="text-white bg-cyan-600 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs w-full sm:w-auto px-4 py-2 text-center0">Post</button>
+            <button class="text-white bg-cyan-600 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center0">Post</button>
         </div>
     </form>
 </div>

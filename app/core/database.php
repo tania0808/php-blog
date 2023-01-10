@@ -49,6 +49,7 @@ class Database
         if (is_array($result) && count($result) > 0) {
             return $result;
         }
+
         return false;
     }
 }

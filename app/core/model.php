@@ -23,4 +23,12 @@ class Model extends Database
         return $this->query($query, $data);
     }
 
+    public function delete($column, $value){
+        $query = "DELETE FROM $this->table WHERE $column = :value";
+
+        return $this->query($query, [
+            'value'=>$value
+        ]);
+    }
+
 }

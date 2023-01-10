@@ -3,7 +3,7 @@
 <div class="h-72">
     <img class="h-full w-full object-cover" src="<?=ROOT?>/assets/background.jpeg" alt="">
 </div>
-<div class="w-11/12 md:w-3/5 h-44 m-auto bg-white rounded-lg -translate-y-10 flex">
+<div class="w-11/12 md:w-9/12 h-44 m-auto bg-white rounded-lg -translate-y-10 flex">
     <img class="h-36 rounded-lg border-solid border-2 border-white mr-2 -translate-y-14 translate-x-10" src="<?= ROOT ?>/assets/user_female.jpg" alt="">
     <div class=" pl-14">
         <div class="flex mt-4 justify-between items-center pr-4">
