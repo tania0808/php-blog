@@ -8,4 +8,5 @@
     <title>Homepage</title>
 </head>
 <body>
-<div class="w-11/12 m-auto">
+<main class="w-full">
+

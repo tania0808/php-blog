@@ -1,4 +1,4 @@
-<div class="flex justify-between items-center">
+<div class="flex justify-between items-center bg-white px-6">
     <a href="<?= ROOT ?>/home"><img class="h-16 object-fill" src="<?= ROOT ?>/assets/logo.jpeg" alt="logo"></a>
     <?php
     if (isset($_SESSION['USER'])) { ?>

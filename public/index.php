@@ -18,6 +18,13 @@ $app = new App();
         * {
             font-family: 'Poppins';
         }
+        main {
+            background: #FAFAFA;
+            height: 100vh;
+        }
+        textarea {
+            resize: none;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 

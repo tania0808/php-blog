@@ -12,7 +12,8 @@ class SignUp extends Controller
                 $_POST['user_id'] = generateRandomString();
                 $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $user->insert($_POST);
-                $_SESSION["USER"] = (object)$_POST;
+                $user_created = $user->where('email', $_POST['email']);
+                $_SESSION["USER"] = $user_created[0];
                 $this->redirect('home');
             } else {
                 $errors = $user->errors;
