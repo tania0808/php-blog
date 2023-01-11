@@ -4,9 +4,8 @@ class Explore extends Controller
 {
     public function index()
     {
-        $user = $this->model('User');
 
-        $this->view('home/index', [
+        $this->view('explore', [
             'user' => 'tania',
             'tab' => 'explore'
         ]);

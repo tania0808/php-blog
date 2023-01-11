@@ -4,9 +4,9 @@ class Home extends Controller
 {
     public function index()
     {
-        $user = new User();
-        $post = new Post();
-        $posts = $post->query('SELECT * FROM posts');
+        $user = new Users();
+        $post = new Posts();
+        $posts = $post->query('SELECT * FROM posts order by id desc');
         //$posts = (array) $posts;
 
         if(is_array($posts)){
@@ -19,7 +19,7 @@ class Home extends Controller
         $error = '';
 
         if(isset($_POST['text'])){
-            $post = new Post();
+            $post = new Posts();
             if($_FILES['image']['error']){
                 $_POST['user_id'] = $_SESSION['USER']->user_id;
                 $_POST['post_id'] = generateRandomString();
@@ -55,13 +55,4 @@ class Home extends Controller
 
     }
 
-    public function delete($id){
-        $post = new Post();
-        $result = $post->delete('post_id', $id);
-        if(!$result){
-            $this->redirect('home');
-        } else {
-            echo "Error !!!";
-        }
-    }
 }

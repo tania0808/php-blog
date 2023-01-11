@@ -23,6 +23,20 @@ class Model extends Database
         return $this->query($query, $data);
     }
 
+    public function update($id,$column,$data){
+        $str = "";
+        show($data);
+        foreach ($data as $key => $value){
+            $str .= $key . '=:' . $key . ',';
+        }
+        $data['id'] = $id;
+        $str = trim($str, ',');
+        echo $str;
+        $query = "UPDATE $this->table SET $str WHERE $column = :id";
+        echo $query;
+        return $this->query($query, $data);
+    }
+
     public function delete($column, $value){
         $query = "DELETE FROM $this->table WHERE $column = :value";
 
@@ -30,5 +44,7 @@ class Model extends Database
             'value'=>$value
         ]);
     }
+
+
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-class Post extends Model
+class Posts extends Model
 {
     public $table = 'posts';
 

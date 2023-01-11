@@ -4,9 +4,9 @@ class Bookmarks extends Controller
 {
     public function index()
     {
-        $user = $this->model('User');
+        $user = $this->model('Users');
 
-        $this->view('home/index', [
+        $this->view('bookmarks', [
             'user' => 'tania',
             'tab' => 'bookmarks'
         ]);

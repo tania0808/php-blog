@@ -4,7 +4,7 @@ class SignUp extends Controller
 {
     public function index()
     {
-        $user = new User();
+        $user = new Users();
         $errors = [];
 
         if (count($_POST) > 0) {

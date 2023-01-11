@@ -4,8 +4,8 @@ class Profile extends Controller
 {
     public function index($id)
     {
-        $user = new User();
-        $post = new Post();
+        $user = new Users();
+        $post = new Posts();
         $posts = $post->where('user_id', $id);
         $posts = (array) $posts;
         foreach ($posts as $post){
@@ -14,7 +14,8 @@ class Profile extends Controller
 
         if (Auth::isLoggedIn()) {
             $this->view('profile/user-profile', [
-                'posts'=>$posts
+                'posts'=>$posts,
+                'user'=>$user->where('user_id', $id)[0]
             ]);
         } else {
             $this->redirect('login');

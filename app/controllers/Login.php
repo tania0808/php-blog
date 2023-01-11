@@ -5,7 +5,7 @@ class Login extends Controller
     public function index()
     {
         $errors = [];
-        $user = new User();
+        $user = new Users();
         if (count($_POST) > 0) {
             $user_exists = $user->where('email', $_POST['email']);
             if ($user_exists) {

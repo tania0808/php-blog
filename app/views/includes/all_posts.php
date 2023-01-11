@@ -13,19 +13,19 @@ foreach ($posts as $post) { ?>
 
             <?php if (Auth::is_own_content($post)) : ?>
                 <div class="w-4">
-                    <div class="flex items-center" id="dropdownDefaultButton" data-dropdown-toggle="post">
+                    <div class="flex items-center" id="dropdownDefaultButton" data-dropdown-toggle="post-<?=$post->id?>">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="post"
+                    <div id="post-<?=$post->id?>"
                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
                         <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
                             aria-labelledby="dropdownDefaultButton">
 
-                            <a href="<?= ROOT ?>/home/edit/<?= $post->post_id ?>"
+                            <a href="<?= ROOT ?>/post/edit/<?= $post->post_id ?>"
                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black">Edit</a>
 
-                            <a href="<?= ROOT ?>/home/delete/<?= $post->post_id ?>"
+                            <a href="<?= ROOT ?>/post/delete/<?= $post->post_id ?>"
                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black">Delete</a>
 
                         </ul>
