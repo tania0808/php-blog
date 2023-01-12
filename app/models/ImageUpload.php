@@ -17,7 +17,7 @@ class ImageUpload
     // Class methods
 
     public function __construct($image){
-        $this->image_name = $image['name'];
+        $this->image_name = time() . '_' . trim(basename($image['name']));
         $this->image_size = $image['size'];
         $this->image_type = $image['type'];
         $this->image_temp = $image['tmp_name'];
