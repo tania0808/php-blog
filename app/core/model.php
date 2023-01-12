@@ -31,7 +31,6 @@ class Model extends Database
         }
         $data['id'] = $id;
         $str = trim($str, ',');
-        echo $str;
         $query = "UPDATE $this->table SET $str WHERE $column = :id";
         echo $query;
         return $this->query($query, $data);
