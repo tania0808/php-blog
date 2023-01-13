@@ -20,11 +20,9 @@ class Settings extends Controller
 
             if (empty($_FILES['image']['tmp_name']) || !is_uploaded_file($_FILES['image']['tmp_name'])) {
                 unset($_POST['image']);
-                show($_POST);
                 $user->update($id, 'user_id', $_POST);
                 $this->redirect("settings/$id");
             } else {
-                show($_POST);
                 $image = new ImageUpload($_FILES['image']);
                 $_POST['image'] = $image->image_name;
                 $user->update($id, 'user_id', $_POST);
@@ -33,16 +31,6 @@ class Settings extends Controller
 
             }
         }
-
-        if(isset($_POST)){
-            show($_POST);
-        }
-
-        if(isset($_FILES['image'])){
-            show($_FILES['image']);
-        }
-
-
 
         if (Auth::isLoggedIn()) {
             $this->view('profile/profile-settings', [

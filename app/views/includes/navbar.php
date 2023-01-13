@@ -23,7 +23,7 @@
         </div>
         <div class="flex">
             <div class="flex items-center" id="dropdownDefaultButton" data-dropdown-toggle="dropdown">
-                <img class="h-8 rounded-sm mr-2" src="<?= ROOT ?>/assets/user_female.jpg" alt="">
+                <img class="h-8 w-8 object-cover rounded-sm mr-2" src="<?= ROOT ?>/assets/<?=$currentUser->image?>" alt="">
                 <p><?= $_SESSION["USER"]->user_name ?></p>
                 <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">

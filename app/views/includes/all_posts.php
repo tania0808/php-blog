@@ -1,10 +1,10 @@
 <?php
 if(count($posts) > 0){
 foreach ($posts as $post) { ?>
-    <div class="bg-white w-9/12 md:w-8/12 my-6 mx-auto rounded-xl pt-2.5 px-6 pb-6 mb-10">
+    <div class="bg-white w-9/12 md:w-6/12 lg:w-2/5 my-6 mx-auto rounded-xl pt-2.5 px-6 pb-6 mb-10">
         <div class="flex items-center justify-between">
             <div class="flex">
-                <img class="h-10 rounded-sm mr-2" src="<?= ROOT . '/assets/' . $_SESSION['USER']->image ?>" alt="">
+                <img class="h-10 w-10 object-cover rounded-full mr-2" src="<?= ROOT . '/assets/' . $post->user->image ?>" alt="">
                 <div>
                     <h3 class="font-bold text-sm"><?= $post->user->user_name ?></h3>
                     <span class="text-xs"><?= get_date($post->date) ?></span>

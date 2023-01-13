@@ -6,6 +6,7 @@ class Home extends Controller
     {
         $user = new Users();
         $post = new Posts();
+        $currentUser = $user->where('user_id', $_SESSION['USER']->user_id);
         $posts = $post->query('SELECT * FROM posts order by id desc');
         //$posts = (array) $posts;
 
@@ -45,6 +46,7 @@ class Home extends Controller
 
         if (Auth::isLoggedIn()) {
             $this->view('home/index', [
+                'currentUser'=>$currentUser[0],
                 'posts' => $posts,
                 'tab' => 'home',
                 'error'=>$error,
